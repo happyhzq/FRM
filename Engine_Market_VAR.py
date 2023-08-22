@@ -36,3 +36,8 @@ elseif (portfolio = bond):
   {
     VAR = -1 * (u - z * segma)
   }
+
+#计算投资组合的收益率
+#计算日收益率：
+
+rt = 
