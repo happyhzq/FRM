@@ -26,3 +26,13 @@ elseif (portfolio = future):
   {
     VAR = 1 - exponentiation ^ (u + z * segma)
   }
+#如果投资组合全部是外汇，那么用standard normal distribution比较合适
+elseif (portfolio = fx):
+  {
+    VAR = -1 * ( u - z * segma)
+  }
+#如果投资组合全部是债券，那么用standard normal distribution比较合适
+elseif (portfolio = bond):
+  {
+    VAR = -1 * (u - z * segma)
+  }
