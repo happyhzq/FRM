@@ -40,4 +40,4 @@ elseif (portfolio = bond):
 #计算投资组合的收益率
 #计算日收益率：
 
-rt = 
+rt = (
