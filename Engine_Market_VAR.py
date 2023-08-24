@@ -44,12 +44,15 @@ rt = ((pt + dt - pt-1)/pt-1 )  and t>0
 #计算几何收益率
 rt = ln((pt+dt)/(pt-1)) and t>1
 
-#模拟收益的分布
+#描述收益的分布情况：
+
 
 distribution = f(rt) and t > 0
 
 calculate u 
 calculate variance
+calculate std deviation
+
 
 
 
