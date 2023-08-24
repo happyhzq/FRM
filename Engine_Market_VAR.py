@@ -26,12 +26,12 @@ elseif (portfolio = future):
   {
     VAR = 1 - exponentiation ^ (u + z * segma)
   }
-#如果投资组合全部是外汇，那么用standard normal distribution比较合适
+#如果投资组合全部是外汇，那么用normal distribution比较合适
 elseif (portfolio = fx):
   {
     VAR = -1 * ( u - z * segma)
   }
-#如果投资组合全部是债券，那么用standard normal distribution比较合适
+#如果投资组合全部是债券，那么用normal distribution比较合适
 elseif (portfolio = bond):
   {
     VAR = -1 * (u - z * segma)
@@ -39,5 +39,17 @@ elseif (portfolio = bond):
 
 #计算投资组合的收益率
 #计算日收益率：
+#计算算数收益率
+rt = ((pt + dt - pt-1)/pt-1 )  and t>0
+#计算几何收益率
+rt = ln((pt+dt)/(pt-1)) and t>1
 
-rt = (
+#模拟收益的分布
+
+distribution = f(rt) and t > 0
+
+calculate u 
+calculate variance
+
+
+
