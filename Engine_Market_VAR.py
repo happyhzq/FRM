@@ -40,18 +40,81 @@ elseif (portfolio = bond):
 #计算投资组合的收益率
 #计算日收益率：
 #计算算数收益率
-rt = ((pt + dt - pt-1)/pt-1 )  and t>0
+arithmetic_rt = ((pt + dt - pt-1)/pt-1 )  and t>0
 #计算几何收益率
-rt = ln((pt+dt)/(pt-1)) and t>1
-
-#描述收益的分布情况：
+log_rt = ln((pt+dt)/(pt-1)) and t>1
 
 
-distribution = f(rt) and t > 0
+#描述算数收益的分布情况：
 
-calculate u 
+distribution = f(arithmetic_rt) and t > 0
+
+#计算样本量
+calculate n 
+#计算样本均值
+calculate u
+#计算样本方差
 calculate variance
-calculate std deviation
+#计算样本标准差
+calculate segma = std deviation
+#计算样本峰度
+calculate kurtosis
+#计算样本的偏度
+calculate skewness
+
+#描述对数收益的分布情况
+distribution = f(log_rt) and t > 0
+
+#计算样本量
+calculate n 
+#计算样本均值
+calculate u
+#计算样本方差
+calculate variance
+#计算样本标准差
+calculate segma = std deviation
+#计算样本峰度
+calculate kurtosis
+#计算样本的偏度
+calculate skewness
+
+calculate VaR distribution
+
+i = 0.0001
+n = (0,10000)
+q = n * i;
+
+#一致性风险度量：
+M = \int_{0}^{1} (p * q) dp
+#计算指数加权函数：
+p = (exponent ^(-(1-p) / r) / (1 - exponent ^ (-1 / r))
+
+r = 0.05
+
+calculate conditional VaR
+
+calculate ES
+
+ES = 1/n * VaR
+
+compare the difference between VaR and ES
+
+df = ES - VaR
+
+if distribution != normal distribution and distribution != log_normal distribution:
+
+{
+  use noparametic method  
+}
+
+
+
+#为历史数据赋予权重
+
+
+
+
+
 
 
 
