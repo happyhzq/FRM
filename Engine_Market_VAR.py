@@ -104,14 +104,30 @@ df = ES - VaR
 if distribution != normal distribution and distribution != log_normal distribution:
 
 {
-  use noparametic method  
+  use non-parametric approach or 
+  use semi-parametric approach
 }
-
-
 
 #为历史数据赋予权重
 
+for non-parametric approach:
+  rank ri as ascending;
+  confidence_interval=0.95
+  i = n * (1 - confidence_interval) + 1
+  find ri
 
+for semi-parametric approach:
+
+  if (volatility = flat):
+  {
+    use age-weighted historical simulation
+    
+  }
+
+  elseif (volatility != flat):
+  {
+    use     
+  }
 
 
 
