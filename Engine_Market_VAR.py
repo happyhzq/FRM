@@ -126,7 +126,7 @@ for semi-parametric approach:
 
   elseif (volatility != flat):
   {
-    use     
+    use volatility 
   }
 
 
